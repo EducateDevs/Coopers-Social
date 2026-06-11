@@ -3,38 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Coopers Social</title>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
+    <title>Coopers Social</title>
     <style>
-        body { margin: 0; background-color: #0f0f0f; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
-        .container { width: 100%; max-width: 350px; text-align: center; }
-        input { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: white; box-sizing: border-box; }
-        button { width: 100%; padding: 12px; background: #007bff; border: none; border-radius: 8px; color: white; font-weight: bold; font-size: 16px; cursor: pointer; }
+        body { background: #0f0f0f; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        .btn { display: block; width: 200px; padding: 15px; margin: 10px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .signup { background: #007bff; color: white; }
+        .login { background: #333; color: white; }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Join Coopers Social</h1>
-        <input type="text" id="username" placeholder="Username">
-        <input type="email" id="email" placeholder="Email address">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="signUp()">Create Account</button>
-        <p>Already have an account? <a href="index.html">Log in</a></p>
-    </div>
-
-    <script>
-        // Initialize Supabase
-        // REPLACE THESE WITH YOUR ACTUAL KEYS FROM SUPABASE DASHBOARD
-        const supabaseUrl = 'YOUR_SUPABASE_URL';
-        const supabaseKey = 'YOUR_SUPABASE_ANON_KEY';
-        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
-        async function signUp() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+    <h1>Coopers Social</h1>
+    <a href="signup.html" class="btn signup">Create Account</a>
+    <a href="login.html" class="btn login">Log In</a>
+</body>
+</html>            const password = document.getElementById('password').value;
             const username = document.getElementById('username').value;
 
             // Supabase Auth call
