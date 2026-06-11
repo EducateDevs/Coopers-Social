@@ -1,0 +1,14 @@
+<body>
+    <h1>Welcome to Coopers Social</h1>
+    <div id="feed">
+        <p>Post your first update here!</p>
+    </div>
+    <button onclick="logout()">Log Out</button>
+
+    <script>
+        async function logout() {
+            await supabase.auth.signOut();
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
